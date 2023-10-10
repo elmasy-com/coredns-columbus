@@ -21,7 +21,7 @@ columbus
 
 ## Examples
 
-Log all requests to stdout
+Enable plugin:
 
 ~~~ corefile
 . {
