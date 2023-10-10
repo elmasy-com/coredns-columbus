@@ -28,6 +28,6 @@ Enable plugin:
 ~~~ corefile
 . {
     columbus
-    whoami
+    forward . 1.1.1.1
 }
 ~~~
