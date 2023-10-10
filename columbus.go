@@ -3,6 +3,7 @@ package columbus
 import (
 	"context"
 	"net/http"
+	"sync/atomic"
 
 	"github.com/coredns/coredns/plugin"
 	clog "github.com/coredns/coredns/plugin/pkg/log"
@@ -12,8 +13,9 @@ import (
 )
 
 var (
-	log         = clog.NewWithPlugin("columbus")
-	DomainsChan chan *string
+	log                        = clog.NewWithPlugin("columbus")
+	DomainsChan   chan *string = nil
+	InsertWorkers *atomic.Bool = nil // Indicate whether insertWokers started
 )
 
 type Columbus struct {
@@ -51,7 +53,7 @@ func (r *DomainInserter) WriteMsg(res *dns.Msg) error {
 	return r.ResponseWriter.WriteMsg(res)
 }
 
-func domainInserter() {
+func insertWorker() {
 
 	for d := range DomainsChan {
 
