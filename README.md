@@ -20,6 +20,8 @@ columbus [BUFF] [WORKERS]
 - **BUFF**: Optional argument to set the underlying channel size (default: *10000*).
 - **WORKERS**: Optional argument to set the number of insert workers (default: *number of proc*).
 
+The **BUFF** and **WORKER** needs to be set once.
+
 ## Examples
 
 Enable with default settings:
