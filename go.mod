@@ -43,6 +43,7 @@ require (
 	github.com/dnstap/golang-dnstap v0.4.0 // indirect
 	github.com/dustin/go-humanize v1.0.1 // indirect
 	github.com/ebitengine/purego v0.5.0-alpha // indirect
+	github.com/elmasy-com/slices v0.0.0-20230712174526-6eb4e5e38b73 // indirect
 	github.com/emicklei/go-restful/v3 v3.10.2 // indirect
 	github.com/farsightsec/golang-framestream v0.3.0 // indirect
 	github.com/flynn/go-shlex v0.0.0-20150515145356-3f9db97f8568 // indirect
