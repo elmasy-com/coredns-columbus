@@ -10,6 +10,8 @@ import (
 	"github.com/elmasy-com/elnet/validator"
 
 	"github.com/miekg/dns"
+
+	eldns "github.com/elmasy-com/elnet/dns"
 )
 
 var (
@@ -61,7 +63,7 @@ func insertWorker() {
 			continue
 		}
 
-		req, err := http.NewRequest("PUT", "https://columbus.elmasy.com/api/insert/"+*d, nil)
+		req, err := http.NewRequest("PUT", "https://columbus.elmasy.com/api/insert/"+eldns.Clean(*d), nil)
 		if err != nil {
 			log.Errorf("Failed to create request for %s: %s", *d, err)
 			continue
