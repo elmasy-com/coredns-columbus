@@ -50,3 +50,7 @@ Set buffer size to 100 with 4 workers:
     forward . 1.1.1.1
 }
 ~~~
+
+## Author
+
+[System administrator service and Cybersecurity for small and medium-sized businesses in and around Győr.](https://www.gorbe.io/)
